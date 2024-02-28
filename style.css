@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background-image: url("media/body_background7.jpg");
+  background-size: cover;
+}
+
+.game-field {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.top-field {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: right;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.top-clues {
+  min-height: 50px;
+  max-height: 150px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  background-color: grey;
+}
+
+.top-clue-cell {
+  width: 48.4px;
+  height: 49.8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kalam", cursive;
+  background-color: rgba(197, 201, 201, 0.9);
+}
+
+/* Нижняя часть игрового поля */
+.bottom-field {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: right;
+}
+
+.game-cells {
+  width: 250px;
+  height: 250px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1px;
+  border: 2px solid black;
+  background-color: grey;
+}
+
+.game-cell {
+  position: relative;
+  background-color: white;
+}
+
+.game-cell-black {
+  position: relative;
+  background-color: black;
+}
+
+.game-cell-cross {
+  position: relative;
+  background-color: white;
+}
+
+.game-cell-crossline {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  rotate: 45deg;
+  top: 50%;
+  background-color: black;
+}
+
+.game-cell-crossline-2 {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  rotate: -45deg;
+  top: 50%;
+  background-color: black;
+}
+
+.left-clues {
+  min-width: 50px;
+  max-width: 150px;
+  height: 250px;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  background-color: grey;
+}
+
+.left-clue-cell {
+  width: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kalam", cursive;
+  background-color: rgba(197, 201, 201, 0.9);
+}
+
+.buttons-zone {
+  width: 270px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.reset-and-actual {
+  width: 200px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  font-family: "Kalam", cursive;
+  text-align: center;
+}
+
+.reset-game {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(204, 199, 200);
+  background-image: url("media/reset.svg");
+  background-size: cover;
+}
+
+.current-game-text {
+  width: 170px;
+  height: 30px;
+  font-family: "Kalam", cursive;
+  text-align: center;
+  font-size: 20px;
+}
+
+.timer {
+  width: 170px;
+  height: 30px;
+  font-family: "Kalam", cursive;
+  text-align: center;
+}
+
+.choose-button,
+.random-button {
+  width: 100px;
+  height: 35px;
+  font-family: "Kalam", cursive;
+  font-size: 15px;
+  background-color: rgba(197, 201, 201, 0.9);
+}
+
+.select-easy {
+  width: 250px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.easy-item {
+  width: 70px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kalam", cursive;
+  font-size: 15px;
+  background-color: rgba(243, 240, 218, 1);
+}
+
+.easy-item-return {
+  background-color: rgba(214, 159, 168, 1);
+}
+
+.save-load {
+  width: 200px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.save-button {
+  width: 50px;
+  height: 25px;
+  font-family: "Kalam", cursive;
+  background-color: rgba(152, 212, 155, 1);
+}
+
+.load-button {
+  width: 50px;
+  height: 25px;
+  font-family: "Kalam", cursive;
+  background-color: rgba(214, 159, 168, 1);
+}
+
+.toggle-mute {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(204, 199, 200);
+  background-image: url("media/mute.png");
+  background-size: cover;
+}
+
+.toggle-unmute {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(204, 199, 200);
+  background-image: url("media/unmute.png");
+  background-size: cover;
+}
+
+.toggle-light {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(204, 199, 200);
+  background-image: url("media/light_theme.png");
+  background-size: cover;
+}
+
+.toggle-black {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(204, 199, 200);
+  background-image: url("media/dark_theme.png");
+  background-size: cover;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-box {
+  width: 250px;
+  height: 250px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: rgba(243, 240, 218, 1);
+}
+
+.modal-text {
+  font-family: "Kalam", cursive;
+}
+
+.modal-time {
+  font-family: "Kalam", cursive;
+  text-align: center;
+}
+
+.modal-button {
+  width: 100px;
+  height: 35px;
+  font-family: "Kalam", cursive;
+  background-color: grey;
+}
+
+@media screen and (max-width: 1050px) {
+  .body {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .game-field {
+    scale: 90%;
+  }
+}
